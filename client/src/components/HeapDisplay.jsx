@@ -1,10 +1,15 @@
+// HeapDisplay.jsx
 function HeapDisplay({ heaps }) {
   return (
-    <div className="mb-6">
+    <div className="flex flex-wrap justify-center gap-4 mb-6">
       {heaps.map((heap, index) => (
         <div
           key={index}
-          className="inline-block mr-4 mb-2 bg-gray-200 p-3 rounded-lg text-lg"
+          className={`
+            px-5 py-3 rounded-xl text-gray-800 font-semibold text-lg
+            bg-gray-100 shadow-md
+            hover:shadow-lg transition-all duration-200
+          `}
         >
           Đống {index + 1}: {heap} đá
         </div>
@@ -12,4 +17,5 @@ function HeapDisplay({ heaps }) {
     </div>
   );
 }
+
 export default HeapDisplay;
